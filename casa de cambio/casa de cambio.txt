@@ -1,0 +1,23 @@
+casa de cambio que comprar e vende moedas estrangeiras com uma taxa sobre os valores, é assim que eles lucram.
+a casa vende, compra e troca moedas.
+
+estrutura das modeda
+
+nome = "string"; exemplo "Dólar"
+sigla = "string"; exemplo "USD"
+valor = number; exemplo 5.68
+
+
+metodos de lucro
+
+compra:
+
+sempre que a casa for comprar uma moeda, ela pagara 10% a menos do que o valor da moeda.
+
+venda:
+
+sempre que a casa for vender uma moeda, ela vender a moeda 10% mais cara do que o valor da moeda.
+
+troca:
+
+o cliente vende sua moeda estrangeira (taxa -10%), recebe em real e compra a moeda estrangeira que deseja (taxa 10% mais cara).

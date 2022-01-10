@@ -1,0 +1,5 @@
+dolar (USD) = 5.68 reais 
+euro (EUR) = 6.43 reais
+libra (GPB) = 5 reais
+iene (JPY) = 0.049 reais
+
