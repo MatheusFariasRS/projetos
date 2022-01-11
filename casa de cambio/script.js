@@ -1,48 +1,50 @@
-let dolar = 5.68;
-let euro = 6.43;
-let libra = 7.70;
-let iene = 0.049;
-
-
-function venderMoeda (quantidade, moeda) {
-     // cliente vende pra casa
-    let vender = quantidade / moeda;
-    let taxa = 0.10;
-    let total = vender * taxa;
-
-    if (quantidade / moeda > 0)
-     {
-        console.log("O valor da taxa é: " + (vender * taxa) + " Valor a pagar: " + Math.floor(vender + total));
-    }
+function criarMoeda (nome, sigla, valor) {
+    return {nome, sigla, valor};
 }
-        
-    
- function comprarMoeda (quantidade, moeda){
-    // casa compra do cliente
-     let comprar = quantidade / moeda;
-     let taxa = 0.10;
-     let total = comprar * taxa;
 
-     if (quantidade / moeda > 0)
-      {
-         console.log("O valor da taxa é: " + (comprar * taxa) + " Valor a pagar " + Math.floor(comprar - total))
-     }
+let moedas = {
+    usd: criarMoeda('Dólar', 'USD', 5.56810),
+    eur: criarMoeda('Euro', 'EUR', 6.63457),
+    gbp: criarMoeda('Libra', 'GBP', 7.64738),
+    jpy: criarMoeda('Iene', 'JPY', 0.05093),
+    ars: criarMoeda('Peso', 'ARS', 0.06033),
+}
+
+let casa = {
+    taxa: 0.10
+}
+
+casa.proporCompra = function (moeda, quantidade) {
+     let valorAjustado = moeda.valor - (moeda.valor * this.taxa);
+     return valorAjustado * quantidade;
+}
+
+casa.proporVenda = function (moeda, quantidade) {
+    let valorAjustado = moeda.valor * (1 + this.taxa);
+    return valorAjustado * quantidade;
+}
+
+casa.proporTroca = function (moeda1, quantidade1, moeda2, quantidade2) {
+        let valorCompra = this.proporCompra(moeda1, quantidade1),
+            valorVenda = this.proporVenda(moeda2, quantidade2);
+
+            return valorVenda - valorCompra;
+
+}
+
+casa.criarTabela = function (moeda) {
+
+    let tabela = [];
+
+    for (let moeda in moedas) {
+        tabela.push ({
+            "Moeda": moedas[moeda].nome + ' (' + moedas[moeda].sigla + ') ',
+            "Valor de venda": this.proporVenda(moedas[moeda], 1),
+            "Valor de compra": this.proporCompra(moedas[moeda], 1)
+                });
 
     }
- 
 
-function trocarMoeda (moeda, quantidade , moeda2) {
-    
-    let comprar = quantidade * moeda;
-    let taxaCompra = 0.10;
-    let totalCompra = comprar * taxaCompra;
+    return tabela;
 
-    let vender = comprar - totalCompra;
-    let taxaVenda = 0.10;
-    let totalVenda = vender * taxaVenda;
-    let moeda2Venda = totalVenda - vender;
-
-    if (quantidade / moeda > 0) {
-           console.log("A taxa de compra é: " + (comprar * taxaCompra) + " Valor a receber: " + (comprar - totalCompra)  + " A taxa de venda é de: " + (vender * taxaVenda) + " Valor a receber: " + +moeda2Venda)
-    } 
 }
