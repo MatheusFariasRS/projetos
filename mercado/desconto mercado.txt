@@ -1,0 +1,1 @@
+se o mercado comprar mais de 100kg(produto) - (valor * this.lucro)
