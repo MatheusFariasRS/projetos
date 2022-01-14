@@ -14,20 +14,29 @@ let jogo = {
         ['#', 'b', '#', 'b', '#', 'b', '#', 'b']]
 };
 
-
-/*
-
-function posicaoPeca (a, b, c, d) {
-
-    let a = jogo.tabuleiro[0]
-
-}
-*/
-
+// INICIAR PARTIDA
 
 function iniciarPartida (){
     console.table(jogo.tabuleiro);
 }
+
+let novoJogo = "Iniciar partida?"
+
+
+
+function mostrarTabuleiro () {
+    if (confirm(novoJogo) === true) {
+        console.table(jogo.tabuleiro);
+    }    
+    else if (novoJogo !== true) {
+        console.log ("Até a próximo partida!");
+    }
+}
+
+mostrarTabuleiro();
+
+// INICIAR PARTIDA ACIMA.
+
 
 
 
@@ -41,23 +50,4 @@ function mexerPreta (arr, from, to) {
     }
 }
 
-function mexerBranca (arr, from, to) {
-    arr.splice(to, 0, arr.splice(from, 1)[0]);
-
-
-    if (arr["b"] === true, arr["b"] != "#") {
-        console.table(jogo.tabuleiro)
-    } else {
-        return 0;
-    }
-}
-
-
-
-
-
-/*
-if (arr["p"] === true, arr[""] != "#") {
-    console.table(jogo.tabuleiro)
-}
-*/
+mexerPreta();
