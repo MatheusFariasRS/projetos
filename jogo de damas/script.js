@@ -39,15 +39,21 @@ mostrarTabuleiro();
 
 
 
+// MOVER PEÇA
 
+/*
 let arr = jogo.tabuleiro;
 
-function mexerPreta (arr, from, to) {
+function mudarPosicao(arr, from, to) {
     arr.splice(to, 0, arr.splice(from, 1)[0]);
-
-    if (arr["p"] === true, arr["p"] != "#") {
-        console.table(jogo.tabuleiro)
-    }
+    console.table(arr);
 }
 
-mexerPreta();
+function novaPosicao() {
+    return mudarPosicao();
+}
+
+console.log(novaPosicao());
+*/
+
+

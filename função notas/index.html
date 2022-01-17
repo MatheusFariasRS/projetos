@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+   <script>
+       let nomes = ["Matheus", "Jose", "Andrei", "Fabricio"];
+       let primeiroTrimestre = [10, 6, 7, 7];
+       let segundoTrimestre = [9.5, 7, 6, 8];
+       let terceiroTrimestre = [10, 6, 7, 9];
+
+       function media (n1, n2, n3,) {
+           return (n1 + n2 + n3) / 3;
+       }
+
+        
+
+       function passouDeAno(media) {
+
+        let resultado = "Reprovado!";
+        if (media > 7) {
+            resultado = "Aprovado!";
+        }
+        return resultado;
+       }
+      
+
+       for (let i in nomes){
+            
+        let PT1 = primeiroTrimestre[i];
+        let ST2 = segundoTrimestre[i];
+        let TT3 = terceiroTrimestre[i];
+        let m =  media(PT1, ST2, TT3);
+
+           console.log(nomes[i] + " - " + PT1 + " - " + ST2 + " - " + TT3 + " - Sua média final é: " +  Math.floor(m) + " - " +passouDeAno(m));
+       }
+
+       if (media > 8) {
+           console.log("Parabéns")
+       }
+       
+
+   </script>
+
+    
+</body>
+</html>
