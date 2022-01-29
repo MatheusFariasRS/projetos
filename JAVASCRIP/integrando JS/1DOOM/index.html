@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <script>
+     
+     function changeH1 (input) {
+
+         let h1 = document.getElementsByTagName("h1")[0]
+         h1.innerHTML = input.value;
+
+     }
+     
+     function hideH1 () {
+        let h1 = document.getElementsByTagName("h1")[0]
+        h1.style.display = "none";
+     }
+
+     function changeCor () {
+        let h1 = document.getElementsByTagName("div")[0];
+        h1.style.backgroundColor = "green"
+     }
+
+    </script>
+
+    <style>
+        div {
+            font-size: 2rem;
+            display: inline-block;
+            margin: 10px;
+            background-color: blue;
+            padding: 10px;
+            color: whitesmoke;
+            border-radius: 8px;
+
+        }
+    </style>
+  
+</head>
+<body>
+    
+   <h1>clique em mim</h1>
+
+   <input type="text" onchange="changeH1(this)">
+
+   <div onclick="hideH1()"
+        onmouseover="changeCor()">Butão</div>
+
+</body>
+</html>

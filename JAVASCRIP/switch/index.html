@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        let conceito = "";
+        function notas(nota1, nota2) {
+             
+
+            let media = (nota1 + nota2) /2;
+
+            if(media >= 8.5) {
+                console.log(conceito = "Ótimo")
+                
+            } else if (media < 8.5, media >=7 ){
+                console.log(conceito = "Bom")
+            } else {
+                console.log(conceito = "Ruim")
+            }
+        }
+        
+       */
+
+       // Testei "switch" com uma função mas n concegui usar, mas acho que nem faz sentido usar ele com uma função
+       // visto que na função adiciona-se o valor na hora.
+
+     let nota1 = 6;
+     let nota2 = 9;
+
+     let media = (nota1 + nota2) / 2;
+
+     if(media >= 8.5) {
+                console.log(conceito = "Ótimo")
+                
+            } else if (media < 8.5, media >=7 ){
+                console.log(conceito = "Bom")
+            } else {
+                console.log(conceito = "Ruim")
+            }
+
+        switch(conceito) {
+
+            case "Ótimo":
+                console.log("Parabéns!!")
+            break;
+            case "Bom":   
+            console.log("Você está quase lá")
+            break;
+            case "Ruim": 
+            console.log("Estude mais.")
+            break;
+            default:
+                console.log("Houve algum erro!")
+            break;
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function onOver (butao) {
+            butao.style.color = "black";
+            butao.style.backgroundColor = "yellow" 
+        }
+
+        function onOut (butao) {
+            butao.style.color = "white";
+            butao.style.backgroundColor = "rgb(0, 110, 255)" 
+        }
+
+        function apertar (butao) {
+            
+            let b = document.getElementsByTagName("img")[0]
+            b.style.display = "inline";      
+    }
+
+    function apertar2 (butao) {
+            
+            let c = document.getElementsByTagName("img")[0]
+            b.style.display = "none";      
+    }
+        
+
+
+
+        
+    </script>
+
+    <style>
+        img {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 25px;
+            display: none;
+        }
+
+        div {
+            display: inline;
+            background-color: rgb(0, 110, 255);
+            padding: 5px;
+            border-radius: 4px;
+            color: white;
+            font-size: 2rem;
+            
+        }
+    </style>
+</head>
+<body onload="console.log('CARREGOOOWW')">
+
+    <img src="/images.jfif">
+    <br>
+    <div onmouseover="onOver(this)" 
+         onmouseout="onOut(this)" 
+         onclick="apertar(this)"
+         onclick="apertar2">BUTÃO</div>
+    
+</body>
+</html>
